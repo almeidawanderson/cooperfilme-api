@@ -29,6 +29,7 @@ public class SecurityConfigurations {
                         .requestMatchers(HttpMethod.POST, "/scripts").permitAll()
                         .requestMatchers(HttpMethod.GET, "/scripts").permitAll()
                         .requestMatchers(HttpMethod.GET, "/scripts/{id}").permitAll()
+                        // endpoints protegidos do usuário comum, ainda não implementados.
                         .requestMatchers(HttpMethod.GET, "/scripts/status").permitAll()
                         .requestMatchers(HttpMethod.GET, "/scripts").hasAnyRole("ANALISTA", "REVISOR", "APROVADOR")
                         .requestMatchers(HttpMethod.PUT, "/scripts/status").hasAnyRole("ANALISTA", "REVISOR", "APROVADOR")
